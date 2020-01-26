@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
+import { Route, withRouter } from 'react-router-dom'
+import Home from "../src/screens/Home";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>hello</h1>
-    </div>
-  );
-}
+const App = props => (
+  <React.Fragment>
+    <Route exact path="/" component={Home} />
+    
+  </React.Fragment>
+)
 
-export default App;
+export default withRouter(App);
